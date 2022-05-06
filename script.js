@@ -14,8 +14,9 @@ function handleSubmit(e) {
       const createImg = document.createElement("img");
       const imageSource = response.data.photos[0].src.landscape;
       createImg.src = imageSource;
-      createImg.class = "img-src";
-      document.body.appendChild(createImg);
+      createImg.className = "img-src";
+      const element = document.getElementById("section");
+      element.appendChild(createImg);
     });
 }
 
