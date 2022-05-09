@@ -1,4 +1,13 @@
 let searched = document.querySelector(".search");
+const inputs = document.querySelectorAll(".controls input");
+
+function handleUpdate() {
+  const suffix = this.dataset.sizing || "";
+  document.documentElement.style.setProperty(
+    `--${this.name}`,
+    this.value + suffix
+  );
+}
 
 function handleSubmit(e) {
   e.preventDefault();
@@ -20,4 +29,6 @@ function handleSubmit(e) {
     });
 }
 
+inputs.forEach((input) => input.addEventListener("change", handleUpdate));
+inputs.forEach((input) => input.addEventListener("mousemove", handleUpdate));
 searched.addEventListener("search", handleSubmit);

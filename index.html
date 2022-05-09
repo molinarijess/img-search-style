@@ -9,12 +9,38 @@
       content="search your optional image and then change background color, blur and spacing"
     />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="style.css" />
+
     <title>Image Styling</title>
   </head>
   <body>
     <div id="section">
-      <h1>Style your <span>Photo</span></h1>
+      <h1>Style your <span class="highlight">Photo</span></h1>
+
+      <div class="controls">
+        <label for="spacing">Spacing:</label>
+        <input
+          type="range"
+          name="spacing"
+          min="10"
+          max="200"
+          value="10"
+          data-sizing="px"
+        />
+
+        <label for="blur">Blur:</label>
+        <input
+          type="range"
+          name="blur"
+          min="0"
+          max="25"
+          value="10"
+          data-sizing="px"
+        />
+
+        <label for="spacing">Base Color:</label>
+        <input type="color" name="base" value="#cd5c5c" />
+      </div>
+
       <input
         type="search"
         name="search image"
@@ -22,7 +48,7 @@
         placeholder="search image"
       />
     </div>
-
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
   </body>
 </html>
