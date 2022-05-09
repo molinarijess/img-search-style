@@ -25,6 +25,14 @@ body {
   justify-content: center;
 }
 
+.highlight {
+  color: var(--base);
+}
+
+.controls {
+  margin-bottom: 15px;
+}
+
 .img-src {
   background: var(--base);
   border-radius: 10px;
@@ -46,8 +54,4 @@ body {
 
 input::placeholder {
   color: #cfcfcf;
-}
-
-.highlight {
-  color: var(--base);
 }
